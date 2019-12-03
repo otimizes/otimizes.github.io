@@ -66,10 +66,13 @@
 								<b class="caret"></b>
 							</a>
 							<div class="dropdown-menu dropdown-menu-left">
-								<a href="#researchers" class="dropdown-item"><i class="ion-ios-people mr-2"></i> Researchers</a>
+								<a href="#researchers" class="dropdown-item"><i class="ion-ios-people mr-2"></i>
+									Researchers</a>
 								<a href="#carousel" class="dropdown-item"><i class="ion-ios-apps mr-2"></i> Thesys</a>
-								<a href="#cards" class="dropdown-item"><i class="ion-ios-git-network mr-2"></i> Works</a>
-								<a href="#contact" class="dropdown-item"><i class="ion-ios-contact mr-2"></i> Contact</a>
+								<a href="#cards" class="dropdown-item"><i class="ion-ios-git-network mr-2"></i>
+									Works</a>
+								<a href="#contact" class="dropdown-item"><i class="ion-ios-contact mr-2"></i>
+									Contact</a>
 							</div>
 						</li>
 						<li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i
@@ -218,7 +221,25 @@
 					<div class="col-md-12">
 						<h2 class="heading-section mb-4 pb-md-3">
 							Works
+							<i ng-click="showInfo1 = true" class="ion-ios-information-circle-outline mouse-pointer"
+								data-toggle="tooltip" data-placement="right"
+								title="Click here to learn how to list your work below."></i>
 						</h2>
+						<div class="alert alert-info" ng-if="showInfo1">
+							<div class="container">
+								<div class="d-flex">
+									<div class="alert-icon">
+										<i class="ion-ios-information-circle-outline"></i>
+									</div>
+									<p class="mb-0 ml-2">To display your work, send a pull request in <a
+											href="https://github.com/SBSE-UEM/OPLA-Tool" target="_blank">OPLA-Tool
+											Github</a> updating the works.xml file with it. Example: &lt;work&gt;...&lt;/work&gt;
+								</div>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true"><i class="ion-ios-close"></i></span>
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="row">
