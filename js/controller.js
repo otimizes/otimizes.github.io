@@ -3,6 +3,10 @@ app.controller('myCtrl', function ($scope, $http) {
 
     $scope.works = null;
 
+    $scope.cleanStr = function(str) {
+        return str.replace(/ /g, '-');
+    };
+
     var xmlTransform = function (data) {
         console.log("transform data");
         var x2js = new X2JS();

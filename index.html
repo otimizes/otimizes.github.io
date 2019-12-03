@@ -47,11 +47,11 @@
 							<a href="#" class="dropdown-toggle nav-link icon d-flex align-items-center"
 								data-toggle="dropdown">
 								<i class="ion-ios-apps mr-2"></i>
-								Previous Versions
+								Listed Works
 								<b class="caret"></b>
 							</a>
-							<div class="dropdown-menu dropdown-menu-left">
-								<a href="#" class="dropdown-item"><i class="ion-ios-apps mr-2"></i> 0.1-SNAPSHOT</a>
+							<div class="dropdown-menu dropdown-menu-left" ng-if="works" style="white-space: nowrap; overflow: hidden;">
+								<a ng-href="#work-{{cleanStr(work.title)}}" ng-repeat="work in works" class="dropdown-item" style="max-width: 50vw;"><i class="ion-ios-apps mr-2"></i> {{work.title}}</a>
 							</div>
 						</li>
 						<li class="nav-item">
@@ -244,7 +244,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6" ng-repeat="work in works" ng-if="works">
+					<div class="col-md-6" ng-repeat="work in works" ng-if="works" id="work-{{cleanStr(work.title)}}">
 						<div class="card">
 							<h5 class="card-header py-4">{{work.title}}</h5>
 							<div class="card-body">
