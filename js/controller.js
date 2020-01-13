@@ -16,7 +16,9 @@ app.controller('myCtrl', function ($scope, $http) {
 
     $http.get("https://raw.githubusercontent.com/SBSE-UEM/OPLA-Tool/master/works.xml")
         .then(function (response) {
-            $scope.works = xmlTransform(response.data)["works"]["work"];
+            $scope.works = xmlTransform(response.data)["works"]["work"].sort(function(a,b){
+                return b.year-a.year;
+            });
             console.log($scope.works)
         });
 });

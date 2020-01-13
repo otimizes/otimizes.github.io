@@ -246,6 +246,7 @@
 				<div class="row">
 					<div class="col-md-6" ng-repeat="work in works" ng-if="works" id="work-{{cleanStr(work.title)}}">
 						<div class="card">
+							<h5><span class="badge badge-primary" style="position: absolute; right: -3px; top: 4px;">{{work.year}}</span></h5>
 							<h5 class="card-header py-4">{{work.title}}</h5>
 							<div class="card-body">
 								<h5 class="card-title">{{work.author}}
