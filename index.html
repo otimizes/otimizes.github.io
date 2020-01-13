@@ -77,10 +77,6 @@
 						</li>
 						<li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i
 									class="ion-logo-facebook"></i></a></li>
-						<li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i
-									class="ion-logo-twitter"></i></a></li>
-						<li class="nav-item"><a href="#" class="nav-link icon d-flex align-items-center"><i
-									class="ion-logo-instagram"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -270,7 +266,7 @@
 				<div class="row">
 					<div class="col-lg-4 col-md-6 ml-auto mr-auto">
 						<div class="card card-login py-4">
-							<form class="form-login" method="" action="">
+							<form class="form-login" method="post" action="mailto:otimizes@uem.br" enctype="text/plain">
 								<div class="card-header card-header-primary text-center">
 									<h4 class="card-title">Let us a message</h4>
 								</div>
@@ -282,7 +278,7 @@
 												<i class="ion-ios-contact"></i>
 											</span>
 										</div>
-										<input type="text" class="form-control" placeholder="First Name...">
+										<input type="text" class="form-control" name="name" placeholder="Name...">
 									</div>
 									<div class="input-group mb-3">
 										<div class="input-group-prepend">
@@ -290,7 +286,7 @@
 												<i class="ion-ios-paper-plane"></i>
 											</span>
 										</div>
-										<input type="email" class="form-control" placeholder="Email...">
+										<input type="email" class="form-control" name="email" placeholder="Email...">
 									</div>
 									<div class="input-group mb-3">
 										<div class="input-group-prepend">
@@ -298,11 +294,11 @@
 												<i class="ion-ios-text"></i>
 											</span>
 										</div>
-										<input type="text" class="form-control" placeholder="Message...">
+										<input type="text" class="form-control" name="message" placeholder="Message...">
 									</div>
 								</div>
 								<div class="footer text-center">
-									<a href="#" class="btn btn-primary">Send</a>
+									<input type="submit" class="btn btn-primary" value="Send"></input>
 								</div>
 							</form>
 						</div>
