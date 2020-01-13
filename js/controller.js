@@ -19,6 +19,16 @@ app.controller('myCtrl', function ($scope, $http) {
             $scope.works = xmlTransform(response.data)["works"]["work"].sort(function(a,b){
                 return b.year-a.year;
             });
-            console.log($scope.works)
+            $scope.authors = $scope.works.map(function(wk) {
+                return {
+                    name: wk.author,
+                    git: wk.git
+                }
+            }).filter(function(value, index, self) {
+                return self.indexOf(value) === index;
+            }).sort(function(a,b){
+                return a.name.localeCompare(b.name);
+            });
+            console.log($scope.authors)
         });
 });

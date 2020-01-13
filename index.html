@@ -46,12 +46,12 @@
 						<li class="dropdown nav-item">
 							<a href="#" class="dropdown-toggle nav-link icon d-flex align-items-center"
 								data-toggle="dropdown">
-								<i class="ion-ios-apps mr-2"></i>
-								Listed Works
+								<i class="ion-ios-people mr-2"></i>
+								Authors
 								<b class="caret"></b>
 							</a>
 							<div class="dropdown-menu dropdown-menu-left" ng-if="works" style="white-space: nowrap; overflow: hidden;">
-								<a ng-href="#work-{{cleanStr(work.title)}}" ng-repeat="work in works" class="dropdown-item" style="max-width: 50vw;"><i class="ion-ios-apps mr-2"></i> {{work.title}}</a>
+								<a target="_blank" ng-href="{{author.git}}" ng-repeat="author in authors" class="dropdown-item" style="max-width: 50vw;"><i class="ion-ios-person mr-2"></i> {{author.name}}</a>
 							</div>
 						</li>
 						<li class="nav-item">
