@@ -14,7 +14,7 @@ app.controller('myCtrl', function ($scope, $http) {
         return json;
     };
 
-    $http.get("https://raw.githubusercontent.com/SBSE-UEM/OPLA-Tool/master/works.xml")
+    $http.get("https://raw.githubusercontent.com/otimizes/OPLA-Tool/master/works.xml")
         .then(function (response) {
             $scope.works = xmlTransform(response.data)["works"]["work"].sort(function(a,b){
                 return b.year-a.year;
