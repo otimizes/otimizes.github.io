@@ -248,8 +248,10 @@
 						<div class="card">
 							<h5 class="card-header py-4">{{work.title}}</h5>
 							<div class="card-body">
-								<h5 class="card-title">{{work.author}}</h5>
-								<p class="card-text text-justify">{{work.abstract}}</p>
+								<h5 class="card-title">{{work.author}}
+									<i ng-click="work.show = !work.show" ng-class="{'ion-ios-arrow-down': work.show, 'ion-ios-arrow-up': !work.show}" class="mouse-pointer" data-toggle="tooltip" data-placement="right" title="Click here to show the abstract."></i>
+								</h5>
+								<p class="card-text text-justify" ng-show="work.show">{{work.abstract}}</p>
 								<a ng-href="{{work.paperlink}}" class="btn btn-primary" target="_blank">Go to
 									paper</a>
 								<a ng-href="{{work.experimentalpackagelink}}" class="btn btn-white"
