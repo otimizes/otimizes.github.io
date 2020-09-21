@@ -51,7 +51,16 @@
 								<b class="caret"></b>
 							</a>
 							<div class="dropdown-menu dropdown-menu-left" ng-if="works" style="white-space: nowrap; overflow: hidden;">
-								<a target="_blank" ng-href="{{author.git}}" ng-repeat="author in authors" class="dropdown-item" style="max-width: 50vw;"><i class="ion-ios-person mr-2"></i> {{author.name}}</a>
+								<a target="_blank" href="http://lattes.cnpq.br/3603496659156120" class="dropdown-item" style="max-width: 50vw;">
+									<i class="ion-ios-person mr-2"></i> Thelma Elita Colanzi
+								</a>
+								<a target="_blank" href="http://lattes.cnpq.br/6738366464597912" class="dropdown-item" style="max-width: 50vw;">
+									<i class="ion-ios-person mr-2"></i> Aline Maria Malachini Miotto Amaral
+								</a>
+								
+								<a target="_blank" ng-href="{{author.git}}" ng-repeat="author in getAuthors(authors)" class="dropdown-item" style="max-width: 50vw;">
+									<i class="ion-ios-person mr-2"></i> {{author.name}}
+								</a>
 							</div>
 						</li>
 						<li class="nav-item">
@@ -126,14 +135,10 @@
 							</div>
 							<div class="col-md-12">
 								<ul>
-									<li>B.S. em Tecnológo Em Processamento de Dados, Universidade Estadual de Maringá -
-										UEM,
-										1996</li>
-									<li>M.S. em Ciências da Computação e Matemática Computacional, Universidade de São
-										Paulo
-										-
-										USP, 1999</li>
-									<li>Ph.D em Informática, Universidade Federal do Paraná - UFPR, 2014</li>
+									<li>Thelma received the DS degree (2014) from Federal University of Paraná (UFPR), Brazil. She holds the MSc degree in Computer 
+										Science and Computational Math from University of São Paulo (USP/São Carlos), Brazil. She has been lecturer at State University 
+										of Maringá since 2006. Her areas of interest are: software design and maintenance, software product lines, search-based software 
+										engineering and multi-objective evolutionary algorithms.    </li>
 								</ul>
 							</div>
 						</div>
